@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white
       ),
-      initialRoute: RouteGenerator.forgotPassword,
+      initialRoute: RouteGenerator.mainPage,
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }

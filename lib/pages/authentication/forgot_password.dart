@@ -23,41 +23,38 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0),
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Forgot Password'),
-          centerTitle: true,
-          elevation: 0,
-          backgroundColor: myWhite,
-          foregroundColor: Colors.black,
-        ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Column(
-            children: [
-              SizedBox(height: size.height*0.03,),
-              Align(
-                  alignment: Alignment.center,
-                  child: AutoSizeText(
-                    'Please enter your phone number below to receive your OTP number.',
-                    style: TextStyle(color: Colors.grey.shade500),
-                    textAlign: TextAlign.center,
-                  )
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Forgot Password'),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: myWhite,
+        foregroundColor: Colors.black,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 30.0),
+        child: Column(
+          children: [
+            SizedBox(height: size.height*0.03,),
+            Align(
+                alignment: Alignment.center,
+                child: AutoSizeText(
+                  'Please enter your phone number below to receive your OTP number.',
+                  style: TextStyle(color: Colors.grey.shade500),
+                  textAlign: TextAlign.center,
+                )
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  buildPhone(size),
+                  SizedBox(height: size.height*0.03,),
+                  buildSendOTPButton(size),
+                ],
               ),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    buildPhone(size),
-                    SizedBox(height: size.height*0.03,),
-                    buildSendOTPButton(size),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

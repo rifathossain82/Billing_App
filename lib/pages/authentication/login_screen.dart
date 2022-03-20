@@ -25,8 +25,9 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: EdgeInsets.symmetric(horizontal: size.width*0.05),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -40,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: size.height*0.02,),
               GestureDetector(
                 onTap: (){
-
+                  Navigator.pushNamed(context, RouteGenerator.forgotPassword);
                 },
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),

@@ -16,3 +16,27 @@ List<String> countryCodeLength=[
   '8',
   '6',
 ];
+
+List<String> productCategoryList=[
+  'Fashion',
+  'Electronics',
+  'Food',
+  'Machinery',
+];
+
+
+List<String> unitList=[
+  'Pcs',
+  'Pair',
+  'Dozen',
+  'KG',
+  'LT',
+];
+
+List<String> customerList=[
+  'Rahim',
+  'Kawchar',
+  'Jobayer',
+  'Rasel',
+  'Faruk',
+];

@@ -13,8 +13,9 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
-    return Container(
-      child: Column(
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Row(
@@ -27,16 +28,16 @@ class _HomepageState extends State<Homepage> {
               buildItem(size, 'assets/supplier_icon.png', 'Supplier', RouteGenerator.supplier),
             ],
           ),
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //   crossAxisAlignment: CrossAxisAlignment.center,
-          //   children: [
-          //     buildItem(size, 'assets/purchase.png', 'Purchase'),
-          //     buildItem(size, 'assets/stock.png', 'Stock'),
-          //     buildItem(size, 'assets/expenses.png', 'Expenses'),
-          //     buildItem(size, 'assets/invoice.png', 'Invoice'),
-          //   ],
-          // ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              buildItem(size, 'assets/purchase.png', 'Purchase',RouteGenerator.purchase),
+              buildItem(size, 'assets/stock.png', 'Stock',RouteGenerator.stock),
+              buildItem(size, 'assets/invoice.png', 'Invoice', RouteGenerator.invoice),
+              buildItem(size, 'assets/publicVendor.png', 'Public Vendors', RouteGenerator.publicVendors),
+            ],
+          ),
           // Row(
           //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           //   crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,8 +65,8 @@ class _HomepageState extends State<Homepage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(icon),
-            Text(txt,style: GoogleFonts.inter(),)
+            Expanded(child: Image.asset(icon)),
+            Text(txt,style: GoogleFonts.inter(fontSize: 15),textAlign: TextAlign.center,)
           ],
         ),
       ),

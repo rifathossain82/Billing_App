@@ -38,6 +38,8 @@ dependencies:
   auto_size_text: ^3.0.0
   bottom_navy_bar: ^6.0.0
   flutter_svg: ^1.0.3
+  font_awesome_flutter: ^10.0.0
+  rflutter_alert: ^2.0.4
 
 dev_dependencies:
   flutter_test:

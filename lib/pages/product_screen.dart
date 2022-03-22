@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:billing_app/constaints/colors/AppColors.dart';
 import 'package:billing_app/routes/routes.dart';
 import 'package:billing_app/widgets/appBar_bg.dart';
 import 'package:flutter/material.dart';
+
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({Key? key}) : super(key: key);
@@ -14,6 +17,7 @@ class _ProductScreenState extends State<ProductScreen> {
 
   TextEditingController searchController=TextEditingController();
   String searchString = '';
+
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +66,7 @@ class _ProductScreenState extends State<ProductScreen> {
           ),
         ),
       body: buildProduct(),
-      floatingActionButton: buildFloatingButton()
+      floatingActionButton: buildFloatingButton(context)
     );
   }
 
@@ -78,8 +82,8 @@ class _ProductScreenState extends State<ProductScreen> {
           trailing: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('990',style: TextStyle(fontSize: 16,color: myDeepOrange)),
-              Text('1290', style: TextStyle(fontSize: 12),),
+              Text('990',style: TextStyle(fontSize: 16,color: mainColor)),
+              Text('1290', style: TextStyle(fontSize: 12, decoration: TextDecoration.lineThrough),),
             ],
           ),
         ),
@@ -87,7 +91,7 @@ class _ProductScreenState extends State<ProductScreen> {
     );
   }
 
-  Widget buildFloatingButton(){
+  Widget buildFloatingButton(BuildContext context){
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -96,7 +100,7 @@ class _ProductScreenState extends State<ProductScreen> {
           heroTag: 'btn1',
           onPressed: (){},
           child: Icon(Icons.shopping_cart, color: myWhite,),
-          backgroundColor: myDeepOrange,
+          backgroundColor: mainColor,
         ),
         SizedBox(height: 16,),
         FloatingActionButton(
@@ -105,9 +109,10 @@ class _ProductScreenState extends State<ProductScreen> {
             Navigator.pushNamed(context, RouteGenerator.addProduct);
           },
           child: Icon(Icons.add,color: myWhite,),
-          backgroundColor: myDeepOrange,
+          backgroundColor: mainColor,
         ),
       ],
     );
   }
+
 }

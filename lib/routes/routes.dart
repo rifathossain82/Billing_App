@@ -9,6 +9,7 @@ import 'package:billing_app/pages/customeres.dart';
 import 'package:billing_app/pages/invoice.dart';
 import 'package:billing_app/pages/mainpage.dart';
 import 'package:billing_app/pages/product_screen.dart';
+import 'package:billing_app/pages/updateProfilePage.dart';
 import 'package:billing_app/pages/public_vendors.dart';
 import 'package:billing_app/pages/purchase.dart';
 import 'package:billing_app/pages/sales_screen.dart';
@@ -16,6 +17,8 @@ import 'package:billing_app/pages/splash_screen/splash_screen.dart';
 import 'package:billing_app/pages/stock.dart';
 import 'package:billing_app/pages/supplier.dart';
 import 'package:flutter/material.dart';
+
+import '../profilePage.dart';
 
 class RouteGenerator {
   static const String splash = '/';
@@ -35,6 +38,8 @@ class RouteGenerator {
   static const String addProduct = '/addProduct';
   static const String addCustomer = '/addCustomer';
   static const String addSupplier = '/addSupplier';
+  static const String profilePage = '/profilePage';
+  static const String updateProfilePage = '/updateProfilePage';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -72,6 +77,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const AddCustomer());
       case addSupplier:
         return MaterialPageRoute(builder: (_) => const AddSupplier());
+      case profilePage:
+        return MaterialPageRoute(builder: (_) => const ProfilePage());
+      case updateProfilePage:
+        return MaterialPageRoute(builder: (_) => const UpdateProfilePage());
 
       default:
         throw 'Route not found';

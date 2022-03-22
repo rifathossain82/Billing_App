@@ -2,7 +2,7 @@ import 'package:billing_app/constaints/colors/AppColors.dart';
 import 'package:flutter/material.dart';
 
 import '../constaints/strings/AppStrings.dart';
-import '../widgets/countryCodeDropDown.dart';
+import '../widgets/myDropDown.dart';
 
 class AddCustomer extends StatefulWidget {
   const AddCustomer({Key? key}) : super(key: key);
@@ -81,7 +81,7 @@ class _AddCustomerState extends State<AddCustomer> {
           keyboardType: TextInputType.number,
           decoration: InputDecoration(
             labelText: 'Phone Number',
-            prefix: CountryCodeDropDown(countryCodeList, countryCode, (val){
+            prefix: myDropDown(countryCodeList, countryCode, (val){
               setState((){ //
                 countryCode=val;
               });
@@ -139,7 +139,7 @@ class _AddCustomerState extends State<AddCustomer> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4),
-          color: myDeepOrange,
+          color: mainColor,
         ),
         child: Text('Save',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,color: myWhite),),
       ),

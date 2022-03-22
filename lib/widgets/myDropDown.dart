@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget CountryCodeDropDown(
+Widget myDropDown(
     List<String> items,   //from main
     String value, //from main
     void onChange(val) //from main

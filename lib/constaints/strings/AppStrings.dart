@@ -34,9 +34,19 @@ List<String> unitList=[
 ];
 
 List<String> customerList=[
+  'All Customer',
   'Rahim',
   'Kawchar',
   'Jobayer',
   'Rasel',
   'Faruk',
+];
+
+List<String> currencyList=[
+  'BDT',
+  'USD',
+  'GIR',
+  'RUPEE',
+  'EURO',
+  'INR',
 ];

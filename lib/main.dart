@@ -19,6 +19,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         textTheme: GoogleFonts.interTextTheme(),
+        primarySwatch: colorCustom,
+        appBarTheme: AppBarTheme(
+          foregroundColor: Colors.white
+        ),
       ),
       initialRoute: RouteGenerator.mainPage,
       onGenerateRoute: RouteGenerator.generateRoute,

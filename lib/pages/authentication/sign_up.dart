@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../constaints/colors/AppColors.dart';
 import '../../constaints/strings/AppStrings.dart';
-import '../../widgets/countryCodeDropDown.dart';
+import '../../widgets/myDropDown.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -67,7 +67,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                           TextSpan(
                               text: " Log In",
-                              style: GoogleFonts.poppins(color: myDeepOrange)
+                              style: GoogleFonts.poppins(color: mainColor)
                           )
                         ]
                     ),
@@ -112,7 +112,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           keyboardType: TextInputType.number,
           decoration: InputDecoration(
             labelText: 'Phone Number',
-            prefix: CountryCodeDropDown(countryCodeList, countryCode, (val){
+            prefix: myDropDown(countryCodeList, countryCode, (val){
               setState((){ //
                 countryCode=val;
               });
@@ -135,7 +135,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           maxLines: 1,
           keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
-            labelText: 'Email Address',
+            labelText: 'Email Address*',
             border: OutlineInputBorder(),
           ),
         ),
@@ -206,7 +206,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         height: size.height*0.08,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            color: myDeepOrange
+            color: mainColor
         ),
         child: InkWell(
           onTap: (){

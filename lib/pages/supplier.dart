@@ -67,8 +67,8 @@ class _SupplierState extends State<Supplier> {
         onPressed: (){
           Navigator.pushNamed(context, RouteGenerator.addSupplier);
         },
-        child: Icon(Icons.add),
-        backgroundColor: myDeepOrange,
+        child: Icon(Icons.add,color: myWhite,),
+        backgroundColor: mainColor,
       ),
     );
   }
@@ -97,7 +97,7 @@ class _SupplierState extends State<Supplier> {
               width: 80,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
-                color: myDeepOrange.withOpacity(0.2),
+                color: mainColor.withOpacity(0.2),
               ),
               child: Icon(Icons.phone),
             ),
@@ -107,7 +107,7 @@ class _SupplierState extends State<Supplier> {
               width: 80,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
-                color: myDeepOrange.withOpacity(0.2),
+                color: mainColor.withOpacity(0.2),
               ),
               child: Icon(Icons.email_outlined),
             ),

@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../constaints/colors/AppColors.dart';
 import '../../constaints/strings/AppStrings.dart';
-import '../../widgets/countryCodeDropDown.dart';
+import '../../widgets/myDropDown.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({Key? key}) : super(key: key);
@@ -71,7 +71,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         keyboardType: TextInputType.number,
         decoration: InputDecoration(
           labelText: 'Phone Number',
-          prefix: CountryCodeDropDown(countryCodeList, countryCode, (val){
+          prefix: myDropDown(countryCodeList, countryCode, (val){
             setState((){ //
               countryCode=val;
             });
@@ -88,7 +88,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       height: size.height*0.08,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4),
-          color: myDeepOrange
+          color: mainColor
       ),
       child: Center(
           child: Text(

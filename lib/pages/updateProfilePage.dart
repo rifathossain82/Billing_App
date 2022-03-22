@@ -11,45 +11,46 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
 
-class AddProduct extends StatefulWidget {
-  const AddProduct({Key? key}) : super(key: key);
+class UpdateProfilePage extends StatefulWidget {
+  const UpdateProfilePage({Key? key}) : super(key: key);
 
   @override
-  State<AddProduct> createState() => _AddProductState();
+  State<UpdateProfilePage> createState() => _UpdateProfilePageState();
 }
 
-class _AddProductState extends State<AddProduct> {
-
+class _UpdateProfilePageState extends State<UpdateProfilePage> {
   TextEditingController nameController=TextEditingController();
-  TextEditingController categoryController=TextEditingController();
-  TextEditingController brandController=TextEditingController();
-  TextEditingController productCodeController=TextEditingController();
-  TextEditingController stockController=TextEditingController();
-  TextEditingController unitController=TextEditingController();
-  TextEditingController salePriceController=TextEditingController();
-  TextEditingController discountController=TextEditingController();
-  TextEditingController wholeSaleController=TextEditingController();
-  TextEditingController dealerController=TextEditingController();
-  TextEditingController manufactureController=TextEditingController();
-  var selectedCategory='Fashion';
+  TextEditingController phoneController=TextEditingController();
+  TextEditingController customerCareController=TextEditingController();
+  TextEditingController emailController=TextEditingController();
+  TextEditingController addressController=TextEditingController();
+  TextEditingController zipCodeController=TextEditingController();
+  TextEditingController websiteController=TextEditingController();
+  TextEditingController currencyController=TextEditingController();
+  TextEditingController invoicePrefixController=TextEditingController();
 
+  var countryCode='+880';
+  var visibility_value='public';
 
   File? _image;
   File? file;
-
-  String? scanResult;
-
 
   @override
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add New Product'),
+        title: Text('Update Profile'),
         centerTitle: true,
         foregroundColor: myblack,
         elevation: 0,
         backgroundColor: myWhite,
+        actions: [
+          IconButton(
+            onPressed: (){},
+            icon: Icon(Icons.check)
+          )
+        ],
       ),
       body: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
@@ -60,68 +61,33 @@ class _AddProductState extends State<AddProduct> {
             SizedBox(height: size.height*0.04,),
             buildName(size),
             SizedBox(height: size.height*0.03,),
-            buildProductCategory(size),
+            buildPhone(size),
             SizedBox(height: size.height*0.03,),
-            buildBrand(size),
+            buildCustomerCarePhone(size),
             SizedBox(height: size.height*0.03,),
-            Row(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: buildProductCode(size)
-                ),
-                Expanded(
-                  flex: 1,
-                  child: buildScanner(size)
-                ),
-                SizedBox(width: 16,),
-              ],
-            ),
+            buildEmail(size),
             SizedBox(height: size.height*0.03,),
-            Row(
-              children: [
-                Expanded(
-                    child: buildStock(size)
-                ),
-                Expanded(
-                    child: buildUnit(size)
-                ),
-              ],
-            ),
+            buildAddress(size),
             SizedBox(height: size.height*0.03,),
-            Row(
-              children: [
-                Expanded(
-                    child: buildSalePrice(size)
-                ),
-                Expanded(
-                    child: buildDiscount(size)
-                ),
-              ],
-            ),
+            buildZipCode(size),
             SizedBox(height: size.height*0.03,),
-            Row(
-              children: [
-                Expanded(
-                    child: buildWholeSalePrice(size)
-                ),
-                Expanded(
-                    child: buildDealerPrice(size)
-                ),
-              ],
-            ),
+            buildWebsite(size),
             SizedBox(height: size.height*0.03,),
-            buildManufacture(size),
-            SizedBox(height: size.height*0.05,),
-            buildButton(size),
-            SizedBox(height: size.height*0.05,),
+            buildCurrency(size),
+            SizedBox(height: size.height*0.03,),
+            buildInvoicePrefix(size),
+            SizedBox(height: size.height*0.03,),
+            buildVisibilityOption(),
+            SizedBox(height: size.height*0.03,),
+            //buildButton(size),
+            //SizedBox(height: size.height*0.04,),
           ],
         ),
       ),
 
     );
   }
-  
+
   Widget buildImage(Size size, BuildContext context){
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: size.width/4),
@@ -132,25 +98,25 @@ class _AddProductState extends State<AddProduct> {
         child: Container(
           height: size.height*0.15,
           child: Center(
-              child: _image==null?
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  FaIcon(FontAwesomeIcons.image,size: size.height*0.1,),
-                  Text('No Image Selected')
-                ],
-              )
-                  :
-              Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    border: Border.all(width: 1,color: myblack),
-                    image: DecorationImage(
-                      fit: BoxFit.fitWidth, image: FileImage(_image!),
-                    )
-                ),
+            child: _image==null?
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FaIcon(FontAwesomeIcons.image,size: size.height*0.1,),
+                Text('No Image Selected')
+              ],
+            )
+                :
+            Container(
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  border: Border.all(width: 1,color: myblack),
+                  image: DecorationImage(
+                    fit: BoxFit.fitWidth, image: FileImage(_image!),
+                  )
               ),
+            ),
           ),
         ),
       ),
@@ -168,7 +134,7 @@ class _AddProductState extends State<AddProduct> {
           maxLines: 1,
           keyboardType: TextInputType.name,
           decoration: InputDecoration(
-            labelText: 'Product Name',
+            labelText: 'Company & Business Name',
             border: OutlineInputBorder(),
           ),
         ),
@@ -176,22 +142,21 @@ class _AddProductState extends State<AddProduct> {
     );
   }
 
-  Widget buildProductCategory(Size size){
+  Widget buildPhone(Size size){
     return SizedBox(
       width: size.width,
       height: size.height*0.08,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: TextField(
+          controller: phoneController,
           maxLines: 1,
           keyboardType: TextInputType.number,
-          readOnly: true,
-          controller: categoryController,
           decoration: InputDecoration(
-            labelText: 'Product category',
-            suffix: myDropDown(productCategoryList, '', (val) {
-              setState(() {
-                categoryController.text=val;
+            labelText: 'Phone Number',
+            prefix: myDropDown(countryCodeList, countryCode, (val){
+              setState((){ //
+                countryCode=val;
               });
             }),
             border: OutlineInputBorder(),
@@ -201,36 +166,18 @@ class _AddProductState extends State<AddProduct> {
     );
   }
 
-  Widget buildBrand(Size size){
+  Widget buildCustomerCarePhone(Size size){
     return SizedBox(
       width: size.width,
       height: size.height*0.08,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: TextField(
-          controller: brandController,
-          maxLines: 1,
-          keyboardType: TextInputType.name,
-          decoration: InputDecoration(
-            labelText: 'Brand',
-            border: OutlineInputBorder(),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget buildProductCode(Size size){
-    return SizedBox(
-      height: size.height*0.08,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: TextField(
-          controller: productCodeController,
+          controller: customerCareController,
           maxLines: 1,
           keyboardType: TextInputType.number,
           decoration: InputDecoration(
-            labelText: 'Product code*',
+            labelText: 'Customer Care Number',
             border: OutlineInputBorder(),
           ),
         ),
@@ -238,34 +185,18 @@ class _AddProductState extends State<AddProduct> {
     );
   }
 
-  Widget buildScanner(Size size){
-    return InkWell(
-      onTap: (){
-        scanBarcode();
-      },
-      child: Container(
-        height: size.height*0.08,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(4),
-          border: Border.all(color: Colors.grey)
-        ),
-        child: Image.asset('assets/barcode_reader.png'),
-      ),
-    );
-  }
-
-  Widget buildStock(Size size){
+  Widget buildEmail(Size size){
     return SizedBox(
       width: size.width,
       height: size.height*0.08,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: TextField(
-          controller: stockController,
+          controller: emailController,
           maxLines: 1,
-          keyboardType: TextInputType.number,
+          keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
-            labelText: 'Stock*',
+            labelText: 'Email Address',
             border: OutlineInputBorder(),
           ),
         ),
@@ -273,7 +204,63 @@ class _AddProductState extends State<AddProduct> {
     );
   }
 
-  Widget buildUnit(Size size){
+  Widget buildAddress(Size size){
+    return SizedBox(
+      height: size.height*0.08,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: TextField(
+          controller: addressController,
+          maxLines: 1,
+          keyboardType: TextInputType.streetAddress,
+          decoration: InputDecoration(
+            labelText: 'Address',
+            border: OutlineInputBorder(),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildZipCode(Size size){
+    return SizedBox(
+      width: size.width,
+      height: size.height*0.08,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: TextField(
+          controller: zipCodeController,
+          maxLines: 1,
+          keyboardType: TextInputType.number,
+          decoration: InputDecoration(
+            labelText: 'Zip code',
+            border: OutlineInputBorder(),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildWebsite(Size size){
+    return SizedBox(
+      width: size.width,
+      height: size.height*0.08,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: TextField(
+          controller: websiteController,
+          maxLines: 1,
+          keyboardType: TextInputType.text,
+          decoration: InputDecoration(
+            labelText: 'Website',
+            border: OutlineInputBorder(),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildCurrency(Size size){
     return SizedBox(
       width: size.width,
       height: size.height*0.08,
@@ -283,12 +270,12 @@ class _AddProductState extends State<AddProduct> {
           maxLines: 1,
           keyboardType: TextInputType.number,
           readOnly: true,
-          controller: unitController,
+          controller: currencyController,
           decoration: InputDecoration(
-            labelText: 'Unit*',
-            suffix: myDropDown(unitList, '', (val) {
+            labelText: 'Currency',
+            suffix: myDropDown(currencyList, '', (val) {
               setState(() {
-                unitController.text=val;
+                currencyController.text=val;
               });
             }),
             border: OutlineInputBorder(),
@@ -298,18 +285,18 @@ class _AddProductState extends State<AddProduct> {
     );
   }
 
-  Widget buildSalePrice(Size size){
+  Widget buildInvoicePrefix(Size size){
     return SizedBox(
       width: size.width,
       height: size.height*0.08,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: TextField(
-          controller: salePriceController,
+          controller: invoicePrefixController,
           maxLines: 1,
-          keyboardType: TextInputType.number,
+          keyboardType: TextInputType.text,
           decoration: InputDecoration(
-            labelText: 'Sale price*',
+            labelText: 'Invoice Prefix',
             border: OutlineInputBorder(),
           ),
         ),
@@ -317,77 +304,45 @@ class _AddProductState extends State<AddProduct> {
     );
   }
 
-  Widget buildDiscount(Size size){
-    return SizedBox(
-      width: size.width,
-      height: size.height*0.08,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: TextField(
-          controller: discountController,
-          maxLines: 1,
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(
-            labelText: 'Discount*',
-            hintText: '0.00%',
-            border: OutlineInputBorder(),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget buildWholeSalePrice(Size size){
-    return SizedBox(
-      width: size.width,
-      height: size.height*0.08,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: TextField(
-          controller: wholeSaleController,
-          maxLines: 1,
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(
-            labelText: 'Wholesale price',
-            border: OutlineInputBorder(),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget buildDealerPrice(Size size){
-    return SizedBox(
-      width: size.width,
-      height: size.height*0.08,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: TextField(
-          controller: dealerController,
-          maxLines: 1,
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(
-            labelText: 'Dealer price',
-            border: OutlineInputBorder(),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget buildManufacture(Size size){
-    return SizedBox(
-      width: size.width,
-      height: size.height*0.08,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: TextField(
-          controller: manufactureController,
-          maxLines: 1,
-          keyboardType: TextInputType.name,
-          decoration: InputDecoration(
-            labelText: 'Manufacture',
-            border: OutlineInputBorder(),
+  Widget buildVisibilityOption(){
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Card(
+        elevation: 4,
+        child: Container(
+          padding: EdgeInsets.only(top: 8),
+          child: Column(
+            children: [
+              Text('Profile Visibility'),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 50.0),
+                child: Divider(),
+              ),
+              ListTile(
+                title: Text('Private'),
+                leading: Radio(
+                    value: 'private',
+                    groupValue: visibility_value,
+                    onChanged: (val){
+                      setState(() {
+                        visibility_value=val.toString();
+                      });
+                    }
+                ),
+              ),
+              ListTile(
+                title: Text('Public'),
+                leading: Radio(
+                    value: 'public',
+                    groupValue: visibility_value,
+                    onChanged: (val){
+                      setState(() {
+                        visibility_value=val.toString();
+                      });
+                    }
+                ),
+              )
+            ],
           ),
         ),
       ),
@@ -404,7 +359,7 @@ class _AddProductState extends State<AddProduct> {
           borderRadius: BorderRadius.circular(4),
           color: mainColor,
         ),
-        child: Text('Save Product',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700,color: myWhite),),
+        child: Text('Update',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700,color: myWhite),),
       ),
     );
   }
@@ -540,23 +495,5 @@ class _AddProductState extends State<AddProduct> {
     final image = File('${directory.path}/$name');
 
     return File(imagePath).copy(image.path);
-  }
-
-  void scanBarcode() async {
-    late String sanresult;
-    try {
-      sanresult = await FlutterBarcodeScanner.scanBarcode(
-          '#ff6666', 'Cancel', true, ScanMode.BARCODE);
-    } on PlatformException {
-      scanResult = 'Failed to scan';
-    }
-    if (!mounted) {
-      return;
-    }
-
-    setState(() {
-      scanResult = sanresult;
-      productCodeController.text=scanResult.toString();
-    });
   }
 }

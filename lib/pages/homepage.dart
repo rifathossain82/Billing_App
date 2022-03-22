@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:billing_app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,38 +17,38 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              buildItem(size,'assets/product_icon.png','Product', RouteGenerator.product),
-              buildItem(size, 'assets/sales_icon.png', 'Sales', RouteGenerator.sales),
-              buildItem(size, 'assets/customer_icon.png', 'Customers', RouteGenerator.customers),
-              buildItem(size, 'assets/supplier_icon.png', 'Supplier', RouteGenerator.supplier),
+              buildItem(size,'assets/product.png','Product', RouteGenerator.product),
+              buildItem(size, 'assets/sales.png', 'Sales', RouteGenerator.sales),
+              buildItem(size, 'assets/customer.png', 'Customers', RouteGenerator.customers),
             ],
           ),
+          SizedBox(height: size.height*0.05,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              buildItem(size, 'assets/supplier.png', 'Supplier', RouteGenerator.supplier),
               buildItem(size, 'assets/purchase.png', 'Purchase',RouteGenerator.purchase),
               buildItem(size, 'assets/stock.png', 'Stock',RouteGenerator.stock),
-              buildItem(size, 'assets/invoice.png', 'Invoice', RouteGenerator.invoice),
-              buildItem(size, 'assets/publicVendor.png', 'Public Vendors', RouteGenerator.publicVendors),
+
             ],
           ),
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //   crossAxisAlignment: CrossAxisAlignment.center,
-          //   children: [
-          //     buildItem(size, 'assets/list.png', 'Due List'),
-          //     buildItem(size, 'assets/stock.png', 'Stock'),
-          //     buildItem(size, 'assets/expenses.png', 'Expenses'),
-          //     buildItem(size, 'assets/invoice.png', 'Invoice'),
-          //   ],
-          // ),
+          SizedBox(height: size.height*0.05,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              buildItem(size, 'assets/invoice.png', 'Invoice', RouteGenerator.invoice),
+              buildItem(size, 'assets/vendor.png', 'Public Vendors', RouteGenerator.publicVendors),
+              buildItem(size, 'assets/settings.png', 'Invoice settings',RouteGenerator.addCustomer),
+            ],
+          ),
         ],
       ),
     );
@@ -58,16 +59,31 @@ class _HomepageState extends State<Homepage> {
       onTap: (){
         Navigator.pushNamed(context, routeName);
       },
-      child: Container(
-        height: size.height/8,
-        width: size.width/5,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(child: Image.asset(icon)),
-            Text(txt,style: GoogleFonts.inter(fontSize: 15),textAlign: TextAlign.center,)
-          ],
+      child: Card(
+        child: Container(
+          height: size.height/8,
+          width: size.width/4,
+          //color: Colors.red,
+          padding: EdgeInsets.all(4),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Image.asset(icon,),
+              ),
+              SizedBox(height: size.height*0.01,),
+              Expanded(
+                flex: 1,
+                child: AutoSizeText(
+                    txt,
+                    maxLines: 1,
+                    textAlign: TextAlign.center,
+                  )
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -7,8 +7,8 @@ Widget AppBar_bg(){
       // ignore: prefer_const_constructors
         gradient: LinearGradient(
             colors: [
-              myDeepOrange,
-              myDeepOrange,
+              mainColor,
+              mainColor,
             ],
             begin: Alignment.bottomRight,
             end: Alignment.topLeft

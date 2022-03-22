@@ -68,8 +68,8 @@ class _CustomersState extends State<Customers> {
         onPressed: (){
           Navigator.pushNamed(context, RouteGenerator.addCustomer);
         },
-        child: Icon(Icons.add),
-        backgroundColor: myDeepOrange,
+        child: Icon(Icons.add,color: myWhite,),
+        backgroundColor: mainColor,
       ),
     );
   }
@@ -98,7 +98,7 @@ class _CustomersState extends State<Customers> {
               width: 80,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
-                color: myDeepOrange.withOpacity(0.2),
+                color: mainColor.withOpacity(0.2),
               ),
               child: Icon(Icons.phone),
             ),
@@ -108,7 +108,7 @@ class _CustomersState extends State<Customers> {
               width: 80,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
-                color: myDeepOrange.withOpacity(0.2),
+                color: mainColor.withOpacity(0.2),
               ),
               child: Icon(Icons.email_outlined),
             ),

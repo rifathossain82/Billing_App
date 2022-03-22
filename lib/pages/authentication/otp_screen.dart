@@ -58,7 +58,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         ),
                         TextSpan(
                             text: ' Resend code',
-                            style: TextStyle(fontSize: 15,color: myDeepOrange)
+                            style: TextStyle(fontSize: 15,color: mainColor)
                         )
                       ]
                     ),
@@ -99,7 +99,7 @@ class _OtpScreenState extends State<OtpScreen> {
       height: size.height*0.08,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: myDeepOrange
+          color: mainColor
       ),
       child: Center(
           child: Text(
@@ -114,7 +114,7 @@ class _OtpScreenState extends State<OtpScreen> {
       width: size.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: myDeepOrange.withOpacity(0.1)
+        color: mainColor.withOpacity(0.1)
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

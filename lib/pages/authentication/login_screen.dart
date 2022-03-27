@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: size.height*0.02,),
               GestureDetector(
                 onTap: (){
-
+                  Navigator.pushNamed(context, RouteGenerator.forgotPassword);
                 },
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -84,13 +84,12 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget buildPhone(Size size){
     return SizedBox(
       width: size.width,
-      height: size.height*0.12,
+      height: size.height*0.08,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: TextField(
           controller: phoneController,
           maxLines: 1,
-          maxLength: 10,
           keyboardType: TextInputType.number,
           decoration: InputDecoration(
             labelText: 'Phone Number',
@@ -109,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget buildPassword(Size size){
     return SizedBox(
       width: size.width,
-      height: size.height*0.09,
+      height: size.height*0.08,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: TextField(
@@ -138,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Container(
         width: size.width,
-        height: size.height*0.08,
+        height: size.height*0.04,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           color: myDeepOrange
@@ -146,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Center(
             child: Text(
               'LOGIN',
-              style: GoogleFonts.poppins(fontSize: 22,color: myWhite),)),
+              style: GoogleFonts.poppins(fontSize: 16,color: myWhite),)),
 
       ),
     );

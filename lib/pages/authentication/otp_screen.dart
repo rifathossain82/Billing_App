@@ -15,67 +15,65 @@ class _OtpScreenState extends State<OtpScreen> {
   @override
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0),
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Verification Phone'),
-          centerTitle: true,
-          elevation: 0,
-          backgroundColor: myWhite,
-          foregroundColor: Colors.black,
-        ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Column(
-            children: [
-              SizedBox(height: size.height*0.02,),
-              Align(
-                alignment: Alignment.center,
-                child: AutoSizeText(
-                  'Check your phone number. The code is already gone.',
-                  style: TextStyle(color: Colors.grey.shade500),
-                  textAlign: TextAlign.center,
-                )
-              ),
-              Expanded(
-                flex: 4,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    buildOtpSection(),
-                    SizedBox(height: size.height*0.03,),
-                    RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'Code send in ',
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Verification Phone'),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: myWhite,
+        foregroundColor: Colors.black,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 30.0),
+        child: Column(
+          children: [
+            SizedBox(height: size.height*0.02,),
+            Align(
+              alignment: Alignment.center,
+              child: AutoSizeText(
+                'Check your phone number. The code is already gone.',
+                style: TextStyle(color: Colors.grey.shade500),
+                textAlign: TextAlign.center,
+              )
+            ),
+            Expanded(
+              flex: 4,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  buildOtpSection(),
+                  SizedBox(height: size.height*0.03,),
+                  RichText(
+                    text: TextSpan(
+                      style: GoogleFonts.inter(color: myblack),
+                      children: [
+                        TextSpan(
+                          text: 'Code send in ',
+                          style: TextStyle(fontSize: 15)
+                        ),
+                        TextSpan(
+                            text: '0:30',
                             style: TextStyle(fontSize: 15)
-                          ),
-                          TextSpan(
-                              text: '0:30',
-                              style: TextStyle(fontSize: 15)
-                          ),
-                          TextSpan(
-                              text: ' Resend code',
-                              style: TextStyle(fontSize: 15,color: myDeepOrange)
-                          )
-                        ]
-                      ),
+                        ),
+                        TextSpan(
+                            text: ' Resend code',
+                            style: TextStyle(fontSize: 15,color: mainColor)
+                        )
+                      ]
                     ),
-                    SizedBox(height: size.height*0.05,),
-                    buildVerifyButton(size),
-                  ],
-                ),
+                  ),
+                  SizedBox(height: size.height*0.05,),
+                  buildVerifyButton(size),
+                ],
               ),
-              Expanded(
-                flex: 3,
-                child: buildNumberPad(size)
-              ),
-              SizedBox(height: size.height*0.02,),
-            ],
-          ),
+            ),
+            Expanded(
+              flex: 3,
+              child: buildNumberPad(size)
+            ),
+            SizedBox(height: size.height*0.02,),
+          ],
         ),
       ),
     );
@@ -101,7 +99,7 @@ class _OtpScreenState extends State<OtpScreen> {
       height: size.height*0.08,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: myDeepOrange
+          color: mainColor
       ),
       child: Center(
           child: Text(
@@ -116,7 +114,7 @@ class _OtpScreenState extends State<OtpScreen> {
       width: size.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: myDeepOrange.withOpacity(0.1)
+        color: mainColor.withOpacity(0.1)
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -1,7 +1,7 @@
 import 'package:billing_app/constaints/colors/AppColors.dart';
 import 'package:billing_app/constaints/strings/AppStrings.dart';
 import 'package:billing_app/routes/routes.dart';
-import 'package:billing_app/widgets/countryCodeDropDown.dart';
+import 'package:billing_app/widgets/myDropDown.dart';
 import 'package:billing_app/widgets/logo_name.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,8 +25,9 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: EdgeInsets.symmetric(horizontal: size.width*0.05),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -68,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       TextSpan(
                           text: " Register",
-                          style: GoogleFonts.poppins(color: myDeepOrange)
+                          style: GoogleFonts.poppins(color: mainColor)
                       )
                     ]
                   ),
@@ -93,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
           keyboardType: TextInputType.number,
           decoration: InputDecoration(
             labelText: 'Phone Number',
-            prefix: CountryCodeDropDown(countryCodeList, countryCode, (val){
+            prefix: myDropDown(countryCodeList, countryCode, (val){
               setState((){ //
                 countryCode=val;
               });
@@ -140,7 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
         height: size.height*0.04,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: myDeepOrange
+          color: mainColor
         ),
         child: Center(
             child: Text(

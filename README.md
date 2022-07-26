@@ -1,6 +1,6 @@
-Billing App
-It's a pos system app.
-See available features in photos
+Billing App\n
+It's a pos system app.\n
+See available features in photos\n
 
 <img src="https://user-images.githubusercontent.com/88751768/180929445-be328ee6-d938-4e0e-b65b-204a342c16ba.PNG" height="400" width="285"/>
 

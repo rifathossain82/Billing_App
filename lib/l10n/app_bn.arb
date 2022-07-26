@@ -1,0 +1,213 @@
+    {
+        "language" : "বাংলা",
+
+        "appName" : "বিলিং অ্যাপ",
+
+        "home" : "হোম",
+        "dashboard" : "ড্যাশবোর্ড",
+        "settings" : "সেটিংস",
+
+        "products" : "পণ্য",
+        "sales" : "বিক্রয় যোগ করুন",
+        "customer" : "ক্রেতা",
+        "supplier" : "সরবরাহকারী",
+        "dueList" : "বাকির তালিকা",
+        "stock" : "মজুত",
+        "invoice" : "চালান",
+        "invSettings" : "চালান সেটিংস",
+        "seller" : "বিক্রেতা",
+
+        "manageProduct" : "পণ্য পরিচালনা করুন",
+        "cart" : "কার্ট",
+        "profile" : "প্রোফাইল",
+        "developer" : "ডেভেলপার",
+        "aboutApp" : "অ্যাপ সম্পর্কে",
+        "logout" : "লগ আউট",
+
+        "addProductTitle" : "নতুন পণ্য যোগ করুন",
+        "noImageTxt" : "ছবি নির্বাচন করা হয়নি",
+        "productName" : "পণ্যের নাম",
+        "productCategory" : "পন্যের বিভাগ",
+        "selectCategory" : "বিভাগ নির্বাচন করুন",
+        "brand" : "ব্র্যান্ড",
+        "productCode" : "পণ্যের কোড",
+        "unit" : "ইউনিট",
+        "salesPrice" : "বিক্রয় মূল্য",
+        "discount" : "ছাড়",
+        "purchasePrice" : "ক্রয় মূল্য",
+        "manufacture" : "উত্পাদন",
+        "taxPercentage" : "ট্যাক্স শতাংশ",
+        "saveProduct" : "পণ্য সংরক্ষণ করুন",
+
+        "delete" : "মুছে ফেলুন",
+        "total" : "মোট",
+        "itemsInCart" : "আইটেম কার্টে",
+        "taxAmount" : "করের পরিমাণ",
+        "totalIncTax" : "মোট কর সহ",
+        "selectCustomer" : "ক্রেতা নির্বাচন করুন",
+        "totalPrice" : "মোট দাম",
+        "pay" : "পরিশোধ করুন",
+
+        "customerName" : "ক্রেতার নাম",
+        "search" : "অনুসন্ধান করুন",
+        "fromDate" : "তারিখ হইতে",
+        "toDate" : "এখন পর্যন্ত",
+        "ok" : "ঠিক আছে",
+        "list" : "তালিকা",
+
+        "addNewCustomerTitle" : "নতুন ক্রেতা যোগ করুন",
+        "phoneNumber" : "ফোন নম্বর",
+        "emailAddress" : "ইমেইল ঠিকানা",
+        "address" : "ঠিকানা",
+        "save" : "সেভ করুন",
+
+        "supplierName" : "সরবরাহকারীর নাম",
+        "addNewSupplierTitle" : "নতুন সরবরাহকারী যোগ করুন",
+
+        "profilePageTitle" : "প্রোফাইল পৃষ্ঠা",
+        "dailyTransaction" : "দৈনিক লেনদেন",
+        "due" : "বাকি",
+        "promo" : "প্রচার",
+
+        "profile_invSettings" : "প্রোফাইল/ইনভয়েস সেটিংস",
+        "company_businessName" : "কোম্পানি/ব্যবসার নাম",
+        "website" : "ওয়েবসাইট",
+        "profileVisibility" : "প্রোফাইল দৃশ্যমানতা",
+        "private" : "ব্যক্তিগত",
+        "public" : "পাবলিক",
+
+        "account" : "একাউন্ট",
+        "accountInfo" : "অ্যাকাউন্ট এর তথ্য",
+        "common" : "সাধারণ",
+        "languageTitle" : "ভাষা",
+        "others" : "অন্যান্য",
+        "policies" : "নীতি",
+        "terms_conditions" : "শর্তাবলী",
+        "help" : "সাহায্য",
+
+        "sellerName" : "বিক্রেতার নাম",
+        "price" : "মূল্য",
+        "quantity" : "পরিমাণ",
+        "totalPriceOfStock" : "মজুতের মোট মূল্য",
+        "addToCart" : "কার্টে যোগ করুন",
+        "lessQuantityMsg" : "পরিমাণ 1 এর কম হতে পারে না",
+        "bigQuantityMsg" : "পরিমাণ স্টকের চেয়ে বড় হতে পারে না",
+
+        "cash" : "নগদ",
+        "collectByHand" : "হাতে সংগৃহীত",
+        "cardBankCheque" : "কার্ড/ব্যাংক/চেক",
+        "collectBy" : "দ্বারা সংগৃহীত",
+        "credit" : "ক্রেডিট",
+        "savedAsCredit" : "ক্রেডিট হিসাবে সংরক্ষিত",
+
+        "productDetails" : "পণ্যের বিবরণ",
+        "updateProduct" : "পণ্য আপডেট করুন",
+        "warning" : "সতর্কতা",
+        "deleteMsg" : "এটি স্থায়ীভাবে মুছে যাবে",
+        "cancel" : "বাতিল",
+        "delete" : "মুছে ফেলুন",
+
+        "appExitMsg" : "আপনি কি অ্যাপ থেকে বের হতে চান?",
+        "no" : "না",
+        "yes" : "হ্যাঁ",
+
+        "feedback" : "প্রতিক্রিয়া",
+
+        "invoiceNumber" : "চালান নম্বর",
+        "noInvoiceYet" : "এখনও কোন চালান নেই!!",
+        "deleteAll" : "সব মুছে ফেলুন",
+        "deleteSuccessful" : "সফলভাবে মুছে ফেলা হয়েছে",
+
+        "addNewCategory" : "নতুন বিভাগ যোগ করুন",
+        "categoryName" : "বিভাগের নাম",
+        "add" : "যোগ করুন",
+
+        "notifications" : "বিজ্ঞপ্তি",
+
+        "totalAmount" : "সর্বমোট পরিমাণ",
+        "due" : "বাকি",
+
+        "sellerReport" : "বিক্রেতার রিপোর্ট",
+        "month" : "মাস",
+        "year" : "বছর",
+        "salesInCash" : "নগদে বিক্রয়",
+        "salesInCredit" : "ক্রেডিটের মধ্যেমে বিক্রয়",
+        "salesInCardBankCheque" : "কার্ড/ব্যাংক/চেকে বিক্রয়",
+
+        "selectSupplier" : "সরবরাহকারী নির্বাচন করুন",
+        "addProductExitMsg" : "আপনি এই পণ্য সংরক্ষণ করতে চান?",
+        "updateProductExitMsg" : "আপনি পরিবর্তন সংরক্ষণ করতে চান?",
+
+        "addSuccess" : "সফলভাবে যোগ করা হয়েছে",
+        "addFailed" : "যোগ করা ব্যর্থ হয়েছে",
+        "updateSuccess" : "সফলভাবে আপডেট করা হয়েছে",
+        "updateFailed" : "আপডেট ব্যর্থ হয়েছে",
+        "deleteSuccess" : "সফলভাবে মুছে ফেলা হয়েছে৷",
+        "deleteFailed" : "মুছে ফেলতে ব্যর্থ হয়েছে",
+
+        "productStock" : "পণ্য মজুত",
+        "purchaseUnit" : "ক্রয় ইউনিট",
+        "unitType" : "ইউনিট টাইপ",
+
+        "updateStock" : "স্টক আপডেট করুন",
+        "add" : "যোগ করুন",
+        "changeQuantity" : "পরিমাণ পরিবর্তন করুন",
+
+        "editCustomer" : "ক্রেতা সম্পাদনা করুন",
+        "not_set_yet" : "এখনো সেট করা হয়নি",
+        "optional" : "ঐচ্ছিক",
+        "editSupplier" : "সরবরাহকারী সম্পাদনা করুন",
+        "addNewSeller" : "নতুন বিক্রেতা যোগ করুন",
+        "editSeller" : "বিক্রেতা সম্পাদনা করুন",
+
+        "password" : "পাসওয়ার্ড",
+        "re_password" : "পুনরায় পাসওয়ার্ড",
+
+        "editCategory" : "বিভাগ সম্পাদনা করুন",
+        "status" : "স্টেটাস",
+        "changePassword" : "পাসওয়ার্ড পরিবর্তন করুন",
+        "old_password" : "পুরানো পাসওয়ার্ড",
+        "enter_your_new_pass" : "নীচে আপনার নতুন পাসওয়ার্ড লিখুন",
+        "enter_your_old_pass" : "পাসওয়ার্ড পরিবর্তন করতে আপনার পুরানো পাসওয়ার্ড লিখুন",
+        "enterQuantity" : "পরিমাণ লিখুন",
+
+        "currency" : "মুদ্রা",
+        "setYourCurrency" : "আপনার মুদ্রা সেট করুন",
+        "noteForEnterPrice" : "Enter purchase and sales price based on ",
+
+        "active" : "সক্রিয়",
+        "inactive" : "নিষ্ক্রিয়",
+        "trashed" : "ট্র্যাশ",
+        "inactiveAccount": "অ্যাকাউন্ট নিষ্ক্রিয় করুন",
+
+        "deleteAllMsg": "আপনি কি সমস্ত ডেটা মুছতে চান?",
+        "deleteMsg2": "আপনি মুছে ফেলতে চান?",
+        "deleteAll": "সব মুছে ফেলুন",
+        "noItemsAdded": "কোন আইটেম যোগ করা হয়নি",
+        "changeStatus": "স্টেটাস পৰিৱৰ্তন করুন",
+        "changeAlertMsg": "আপনি কি পরিবর্তন করতে চান?",
+
+        "totalCustomer" : "মোট গ্রাহক",
+        "totalSupplier" : "মোট সরবরাহকারী",
+        "totalSeller" : "মোট বিক্রেতা",
+        "totalProductCategory" : "মোট পণ্যের বিভাগ",
+        "totalProduct" : "মোট পণ্য",
+        "totalSale" : "মোট বিক্রয়",
+        "totalSalesAmount" : "মোট বিক্রয়ের পরিমাণ",
+        "totalStock" : "মোট স্টক",
+
+        "noDataFound" : "কোন তথ্য পাওয়া যায়নি",
+        "doYouWantToLogout" : "আপনি লগআউট করতে চান?",
+        "forgetYourPassword" : "আপনার পাসওয়ার্ড ভুলে গেছেন?",
+        "passwordRequired" : "পাসওয়ার্ড প্রয়োজন!",
+        "rePasswordRequired" : "পুনরায় পাসওয়ার্ড প্রয়োজন!",
+        "passwordCharacterError" : "পাসওয়ার্ড 8 অক্ষরের হতে হবে!",
+        "rePasswordCharacterError" : "পুনরায় পাসওয়ার্ড 8 অক্ষরের হতে হবে!",
+        "passwordDoNotMatch" : "পাসওয়ার্ড মিলছে না!"
+
+
+
+
+
+
+    }

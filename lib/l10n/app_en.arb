@@ -1,0 +1,211 @@
+    {
+        "language" : "English",
+
+        "appName" : "Billing App",
+
+        "home" : "Home",
+        "dashboard" : "Dashboard",
+        "settings" : "Settings",
+
+        "products" : "Products",
+        "sales" : "Add Sales",
+        "customer" : "Customer",
+        "supplier" : "Supplier",
+        "dueList" : "Due List",
+        "stock" : "Stock",
+        "invoice" : "Invoice",
+        "invSettings" : "Invoice Settings",
+        "seller" : "Seller",
+
+        "manageProduct" : "Manage Product",
+        "cart" : "Cart",
+        "profile" : "Profile",
+        "developer" : "Developer",
+        "aboutApp" : "About App",
+        "logout" : "Logout",
+
+        "addProductTitle" : "Add New Product",
+        "noImageTxt" : "No Image Selected",
+        "productName" : "Product Name",
+        "productCategory" : "Product Category",
+        "selectCategory" : "Select Category",
+        "brand" : "Brand",
+        "productCode" : "Product Code",
+        "unit" : "Unit",
+        "salesPrice" : "Sales Price",
+        "discount" : "Discount",
+        "purchasePrice" : "Purchase Price",
+        "manufacture" : "Manufacture",
+        "taxPercentage" : "Tax Percentage",
+        "saveProduct" : "Save Product",
+
+
+        "delete" : "Delete",
+        "total" : "Total",
+        "itemsInCart" : "items in cart",
+        "taxAmount" : "Tax amount",
+        "totalIncTax" : "Total Incl Tax",
+        "selectCustomer" : "Select Customer",
+        "totalPrice" : "Total price",
+        "pay" : "Pay",
+
+        "customerName" : "Customer Name",
+        "search" : "Search",
+        "toDate" : "To Date",
+        "fromDate" : "From Date",
+        "ok" : "OK",
+        "list" : "List",
+
+        "addNewCustomerTitle" : "Add New Customer",
+        "phoneNumber" : "Phone Number",
+        "emailAddress" : "Email Address",
+        "address" : "Address",
+        "save" : "Save",
+
+        "supplierName" : "Supplier Name",
+        "addNewSupplierTitle" : "Add New Supplier",
+
+        "profilePageTitle" : "Profile Page",
+        "dailyTransaction" : "Daily Transaction",
+        "due" : "Due",
+        "promo" : "Promo",
+
+        "profile_invSettings" : "Invoice Settings",
+        "company_businessName" : "Company & Business Name",
+        "website" : "Website",
+        "profileVisibility" : "Profile Visibility",
+        "private" : "Private",
+        "public" : "Public",
+
+        "account" : "Account",
+        "accountInfo" : "Account Information",
+        "common" : "Common",
+        "languageTitle" : "Language",
+        "others" : "Others",
+        "policies" : "Policies",
+        "terms_conditions" : "Terms & Conditions",
+        "help" : "Help",
+
+        "sellerName" : "Seller Name",
+        "price" : "Price",
+        "quantity" : "Quantity",
+        "totalPriceOfStock" : "Total price of stock",
+        "addToCart" : "Add to cart",
+        "lessQuantityMsg" : "Quantity can't less than 1",
+        "bigQuantityMsg" : "Quantity can't big than stock",
+
+        "cash" : "Cash",
+        "collectByHand" : "Collected by Hand",
+        "cardBankCheque" : "Card/Bank/Cheque",
+        "collectBy" : "Collected by",
+        "credit" : "Credit",
+        "savedAsCredit" : "Saved as Credit",
+
+        "productDetails" : "Product Details",
+        "updateProduct" : "Update Product",
+        "warning" : "Warning",
+        "deleteMsg" : "This will delete permanently",
+        "cancel" : "Cancel",
+        "delete" : "Delete",
+
+        "appExitMsg" : "Do you want to exit app?",
+        "no" : "No",
+        "yes" : "Yes",
+
+        "feedback" : "Feedback",
+
+        "invoiceNumber" : "Invoice Number",
+        "noInvoiceYet" : "No Invoices Yet!!",
+        "deleteAll" : "Delete All",
+        "deleteSuccessful" : "Deleted Successful",
+
+        "addNewCategory" : "Add New Category",
+        "categoryName" : "Category Name",
+        "add" : "Add",
+
+        "notifications" : "Notifications",
+
+        "totalAmount" : "Total Amount",
+        "due" : "Due",
+
+        "sellerReport" : "Seller Report",
+        "month" : "Month",
+        "year" : "Year",
+        "salesInCash" : "Sales in Cash",
+        "salesInCredit" : "Sales in Credit",
+        "salesInCardBankCheque" : "Sales in card/Bank/Cheque",
+
+        "selectSupplier" : "Select Supplier",
+        "addProductExitMsg" : "Do you want to save this product?",
+        "updateProductExitMsg" : "Do you want to save changes?",
+
+        "addSuccess" : "Successfully added",
+        "addFailed" : "Add failed",
+        "updateSuccess" : "Updated successfully",
+        "updateFailed" : "Update failed",
+        "deleteSuccess" : "Successfully deleted",
+        "deleteFailed" : "Delete failed",
+
+        "productStock" : "Product Stock",
+        "purchaseUnit" : "Purchase Unit",
+        "unitType" : "Unit Type",
+
+        "updateStock" : "Update Stock",
+        "add" : "Add",
+        "changeQuantity" : "Change Quantity",
+
+        "editCustomer" : "Edit Customer",
+        "not_set_yet" : "Not set yet!",
+        "optional" : "Optional",
+        "editSupplier" : "Edit Supplier",
+        "addNewSeller" : "Add New Seller",
+        "editSeller" : "Edit Seller",
+
+        "password" : "Password",
+        "re_password" : "Re-password",
+
+        "editCategory" : "Edit Category",
+        "status" : "Status",
+        "changePassword" : "Change Password",
+        "old_password" : "Old Password",
+        "enter_your_new_pass" : "Enter your new password below",
+        "enter_your_old_pass" : "Enter your old password to change the password",
+        "enterQuantity" : "Enter Quantity",
+
+        "currency" : "Currency",
+        "setYourCurrency" : "Set your currency",
+        "noteForEnterPrice" : "Enter purchase and sales price based on ",
+
+        "active" : "Active",
+        "inactive" : "Inactive",
+        "trashed" : "Trashed",
+        "inactiveAccount": "Inactive Account",
+
+        "deleteAllMsg": "Do you want to delete all data?",
+        "deleteMsg2": "Do you want to delete?",
+        "deleteAll": "Delete All",
+        "noItemsAdded": "No items added",
+        "changeStatus": "Change Status",
+        "changeAlertMsg": "Do you want to change?",
+
+        "totalCustomer" : "Total Customer",
+        "totalSupplier" : "Total Supplier",
+        "totalSeller" : "Total Seller",
+        "totalProductCategory" : "Total Product Category",
+        "totalProduct" : "Total Product",
+        "totalSale" : "Total Sale",
+        "totalSalesAmount" : "Total Sales Amount",
+        "totalStock" : "Total Stock",
+
+        "noDataFound" : "No Data Found",
+        "doYouWantToLogout" : "Do you want to logout?",
+        "forgetYourPassword" : "Forget your password?",
+        "passwordRequired" : "Password required!",
+        "rePasswordRequired" : "Re-password required!",
+        "passwordCharacterError" : "Password must be 8 characters!",
+        "rePasswordCharacterError" : "Re-password must be 8 characters!",
+        "passwordDoNotMatch" : "Passwords do not match!"
+
+
+
+    }
